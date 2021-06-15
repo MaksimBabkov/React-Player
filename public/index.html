@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+<meta
+      name="description"
+      content="KOLOMNA-MusiK-2021"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <style>
+      :root {
+  --size: 50vh;
+  --s:  calc(var(--size) / 25);
+  --b:  calc(var(--size) / 20);
+  
+}
+
+
+body{
+  margin: 0;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+.loader{
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  overflow:hidden;
+  border-radius:50%;
+  transform: rotate(175deg);
+}
+
+
+.loader span{
+  position: absolute;
+  top: calc(var(--b) * var(--i));
+  bottom: calc(var(--b) * var(--i));
+  left: calc(var(--b) * var(--i));
+  right: calc(var(--b) * var(--i));
+  border:var(--s) solid #0b0b0b;
+  
+  
+  border-top:var(--s) solid hsl( calc(21 * var(--i)), 89%, 50%);
+  border-left:var(--s) solid hsl( calc(21 * var(--i)), 89%, 50%);
+  border-radius:50%;
+  animation: animate 1000ms alternate ease-in-out infinite; 
+  animation-delay: calc(-.1s * var(--i));
+  
+     
+}
+
+
+@keyframes animate {
+  0%{
+    transform:rotate(0deg);
+  }
+  100%{
+     transform:rotate(90deg);
+  }
+}
+    </style>
+  
+    <title>PlaYer</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="loader">
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:9;"></span>
+      </div>
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    
+   
+   
+    
+   
+
+  </body>
+  
+</html>

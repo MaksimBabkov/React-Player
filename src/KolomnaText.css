@@ -1,0 +1,12 @@
+@-webkit-keyframes pulsate {
+    50% { color: white; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px rgb(255, 255, 255), 0 0 15px rgb(255, 2, 2); }
+   }
+   @keyframes pulsate {
+    50% { color: white; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 8px rgb(255, 255, 255), 0 0 15px rgb(255, 0, 0); }
+   }
+   #blink7 {
+     color: rgb(0, 174, 255);
+     text-shadow: 0 -2px rgba(0,0,0,.1);
+     -webkit-animation: pulsate 0.2s linear infinite;
+     animation: pulsate 0.2s linear infinite;
+}
