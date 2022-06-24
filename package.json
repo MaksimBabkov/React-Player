@@ -2,6 +2,7 @@
   "name": "react-player-background-siti",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://maksimbabkov.github.io/React-Player/",
   "dependencies": {
     "@animxyz/core": "^0.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -11,6 +12,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
+    "gh-pages": "^4.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-audio-spectrum": "^0.1.0",
@@ -23,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
